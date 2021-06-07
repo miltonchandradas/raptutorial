@@ -29,9 +29,9 @@ CLASS zcl_populate_demo_data IMPLEMENTATION.
     wa_employee-id = NEW cl_system_uuid( )->if_system_uuid~create_uuid_x16( ).
     wa_employee-firstname = 'John'.
     wa_employee-lastname = 'Mabry'.
-    wa_employee-salary = 8000.
+    wa_employee-salary = 7000.
     wa_employee-age = 40.
-    wa_employee-role = 'UX Architect'.
+    wa_employee-role = 'UX Developer'.
     wa_employee-active = abap_true.
     wa_employee-last_changed_at = cl_abap_context_info=>get_system_date( ).
     wa_employee-local_last_changed_at = cl_abap_context_info=>get_system_date( ).
@@ -58,7 +58,7 @@ CLASS zcl_populate_demo_data IMPLEMENTATION.
     wa_employee-firstname = 'Jane'.
     wa_employee-lastname = 'Doe'.
     wa_employee-salary = 9000.
-    wa_employee-age = 40.
+    wa_employee-age = 35.
     wa_employee-role = 'UX Architect'.
     wa_employee-active = abap_true.
     wa_employee-last_changed_at = cl_abap_context_info=>get_system_date( ).
