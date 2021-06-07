@@ -1,4 +1,4 @@
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Interface view for PROJECT'
 define view entity ZI_RAP_PROJECT
   as select from zrap_project as Project

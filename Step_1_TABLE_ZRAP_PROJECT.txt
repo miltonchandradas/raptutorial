@@ -2,7 +2,7 @@
 @AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
 @AbapCatalog.tableCategory : #TRANSPARENT
 @AbapCatalog.deliveryClass : #A
-@AbapCatalog.dataMaintenance : #RESTRICTED
+@AbapCatalog.dataMaintenance : #ALLOWED
 define table zrap_project {
   key client            : mandt not null;
   key id                : sysuuid_x16 not null;

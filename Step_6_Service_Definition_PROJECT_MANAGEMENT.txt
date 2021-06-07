@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service definition Project Management'
+define service ZUI_RAP_PROJ_MGMT {
+  expose ZC_RAP_EMPLOYEE as Employee;
+  expose ZC_RAP_PROJECT as Project;
+}
