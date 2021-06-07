@@ -1,0 +1,20 @@
+@EndUserText.label: 'Consumption view for PROJECT'
+@AccessControl.authorizationCheck: #CHECK
+
+@Search.searchable: true
+@Metadata.allowExtensions: true
+
+define view entity ZC_RAP_PROJECT
+  as projection on ZI_RAP_PROJECT as Project
+{
+  key Id,
+      EmployeeId,
+
+      @Search.defaultSearchElement: true
+      Name,
+      Description,
+      LastChangedAt,
+      LocalLastChangedAt,
+      /* Associations */
+      _Employee : redirected to parent ZC_RAP_EMPLOYEE
+}
