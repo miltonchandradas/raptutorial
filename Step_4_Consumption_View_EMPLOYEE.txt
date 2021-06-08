@@ -16,10 +16,13 @@ define root view entity ZC_RAP_EMPLOYEE
       Firstname,
       @Search.defaultSearchElement: true
       @EndUserText.label: 'Last Name'
-      Lastname,
+      Lastname,     
+      @EndUserText.label: 'Age'
       Age,
       @Search.defaultSearchElement: true
+      @EndUserText.label: 'Role'
       Role,
+      @EndUserText.label: 'Salary'
       Salary,
       @EndUserText.label: 'Active'
       Active,

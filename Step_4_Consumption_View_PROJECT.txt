@@ -14,7 +14,9 @@ define view entity ZC_RAP_PROJECT
       EmployeeId,
 
       @Search.defaultSearchElement: true
+      @EndUserText.label: 'Project Name'
       Name,
+      @EndUserText.label: 'Project Description'
       Description,
       LastChangedAt,
       LocalLastChangedAt,
