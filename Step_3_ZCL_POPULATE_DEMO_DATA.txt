@@ -33,8 +33,6 @@ CLASS zcl_populate_demo_data IMPLEMENTATION.
     wa_employee-age = 40.
     wa_employee-role = 'UX Developer'.
     wa_employee-active = abap_true.
-*    wa_employee-last_changed_at = cl_abap_context_info=>get_system_time( ).
-*    wa_employee-local_last_changed_at = cl_abap_context_info=>get_system_time( ).
     APPEND wa_employee TO it_employee_data.
 
 
@@ -42,16 +40,12 @@ CLASS zcl_populate_demo_data IMPLEMENTATION.
     wa_project-employee_id = wa_employee-id.
     wa_project-name = 'SAP Machine Learning'.
     wa_project-description = 'SAP Machine Learning'.
-*    wa_project-last_changed_at = cl_abap_context_info=>get_system_date( ).
-*    wa_project-local_last_changed_at = cl_abap_context_info=>get_system_date( ).
     APPEND wa_project TO it_project_data.
 
     wa_project-id = NEW cl_system_uuid( )->if_system_uuid~create_uuid_x16( ).
     wa_project-employee_id = wa_employee-id.
     wa_project-name = 'SAP Analytics Cloud'.
     wa_project-description = 'SAP Analytics Cloud'.
-*    wa_project-last_changed_at = cl_abap_context_info=>get_system_date( ).
-*    wa_project-local_last_changed_at = cl_abap_context_info=>get_system_date( ).
     APPEND wa_project TO it_project_data.
 
     wa_employee-id = NEW cl_system_uuid( )->if_system_uuid~create_uuid_x16( ).
@@ -61,8 +55,6 @@ CLASS zcl_populate_demo_data IMPLEMENTATION.
     wa_employee-age = 35.
     wa_employee-role = 'UX Architect'.
     wa_employee-active = abap_true.
-*    wa_employee-last_changed_at = cl_abap_context_info=>get_system_date( ).
-*    wa_employee-local_last_changed_at = cl_abap_context_info=>get_system_date( ).
     APPEND wa_employee TO it_employee_data.
 
 
@@ -70,16 +62,12 @@ CLASS zcl_populate_demo_data IMPLEMENTATION.
     wa_project-employee_id = wa_employee-id.
     wa_project-name = 'SAP S4HANA'.
     wa_project-description = 'SAP S4HANA'.
-*    wa_project-last_changed_at = cl_abap_context_info=>get_system_date( ).
-*    wa_project-local_last_changed_at = cl_abap_context_info=>get_system_date( ).
     APPEND wa_project TO it_project_data.
 
     wa_project-id = NEW cl_system_uuid( )->if_system_uuid~create_uuid_x16( ).
     wa_project-employee_id = wa_employee-id.
     wa_project-name = 'SAP Cloud Application Programming Model'.
     wa_project-description = 'SAP Cloud Application Programming Model'.
-*    wa_project-last_changed_at = cl_abap_context_info=>get_system_date( ).
-*    wa_project-local_last_changed_at = cl_abap_context_info=>get_system_date( ).
     APPEND wa_project TO it_project_data.
 
     INSERT zrap_employee FROM TABLE @it_employee_data.
