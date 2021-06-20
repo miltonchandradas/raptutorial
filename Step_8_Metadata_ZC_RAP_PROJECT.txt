@@ -5,7 +5,7 @@
                 typeNamePlural: 'Projects',
                 title: { type: #STANDARD, value: 'Id' } } }
                 
-annotate view ZC_RAP_PROJECT
+annotate view ZC_RAP_PROJECT_####
     with 
 {
     @UI.facet: [ { id:            'Project',
