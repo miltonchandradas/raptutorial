@@ -3,7 +3,7 @@
 @AbapCatalog.tableCategory : #TRANSPARENT
 @AbapCatalog.deliveryClass : #A
 @AbapCatalog.dataMaintenance : #ALLOWED
-define table zrap_employee {
+define table zrap_employee_#### {
   key client            : mandt not null;
   key id                : sysuuid_x16 not null;
   firstname             : abap.char(100);
