@@ -20,7 +20,7 @@ CLASS lhc_Employee IMPLEMENTATION.
   METHOD get_instance_features.
 
   " Read the active flag of the existing members
-    READ ENTITIES OF zi_rap_employee IN LOCAL MODE
+    READ ENTITIES OF zi_rap_employee_#### IN LOCAL MODE
         ENTITY Employee
           FIELDS ( Active ) WITH CORRESPONDING #( keys )
         RESULT DATA(members)
@@ -50,7 +50,7 @@ CLASS lhc_Employee IMPLEMENTATION.
     " Check references
     " Onboard member
 
-    MODIFY ENTITIES OF ZI_RAP_EMPLOYEE IN LOCAL MODE
+    MODIFY ENTITIES OF ZI_RAP_EMPLOYEE_#### IN LOCAL MODE
         ENTITY Employee
           UPDATE
             FIELDS (  Active )
@@ -65,7 +65,7 @@ CLASS lhc_Employee IMPLEMENTATION.
 
 
     " Fill the response table
-    READ ENTITIES OF ZI_RAP_EMPLOYEE IN LOCAL MODE
+    READ ENTITIES OF ZI_RAP_EMPLOYEE_#### IN LOCAL MODE
       ENTITY Employee
         ALL FIELDS WITH CORRESPONDING #( keys )
       RESULT DATA(members).
@@ -79,7 +79,7 @@ CLASS lhc_Employee IMPLEMENTATION.
   METHOD changeSalary.
 
   " Read relevant UXTeam instance data
-    READ ENTITIES OF ZI_RAP_EMPLOYEE IN LOCAL MODE
+    READ ENTITIES OF ZI_RAP_EMPLOYEE_#### IN LOCAL MODE
       ENTITY Employee
         FIELDS ( Role ) WITH CORRESPONDING #( keys )
       RESULT DATA(members).
@@ -89,7 +89,7 @@ CLASS lhc_Employee IMPLEMENTATION.
       IF member-Role = 'UX Architect'.
 
         " Change salary to hard coded value
-        MODIFY ENTITIES OF ZI_RAP_EMPLOYEE IN LOCAL MODE
+        MODIFY ENTITIES OF ZI_RAP_EMPLOYEE_#### IN LOCAL MODE
         ENTITY Employee
           UPDATE
             FIELDS ( Salary )
@@ -103,7 +103,7 @@ CLASS lhc_Employee IMPLEMENTATION.
       IF member-Role = 'UX Developer'.
 
         " Change salary to hard coded value
-        MODIFY ENTITIES OF ZI_RAP_EMPLOYEE IN LOCAL MODE
+        MODIFY ENTITIES OF ZI_RAP_EMPLOYEE_#### IN LOCAL MODE
         ENTITY Employee
           UPDATE
             FIELDS ( Salary )
@@ -120,7 +120,7 @@ CLASS lhc_Employee IMPLEMENTATION.
 
   METHOD validateAge.
 
-    READ ENTITIES OF ZI_RAP_EMPLOYEE IN LOCAL MODE
+    READ ENTITIES OF ZI_RAP_EMPLOYEE_#### IN LOCAL MODE
         ENTITY Employee
           FIELDS ( Age ) WITH CORRESPONDING #( keys )
         RESULT DATA(members).
