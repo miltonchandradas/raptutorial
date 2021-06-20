@@ -1,6 +1,6 @@
 projection;
 
-define behavior for ZC_RAP_EMPLOYEE alias Employee
+define behavior for ZC_RAP_EMPLOYEE_#### alias Employee
 use etag
 {
   use create;
@@ -10,7 +10,7 @@ use etag
   use association _Project { create; }
 }
 
-define behavior for ZC_RAP_PROJECT alias Project
+define behavior for ZC_RAP_PROJECT_#### alias Project
 use etag
 {
   use update;
