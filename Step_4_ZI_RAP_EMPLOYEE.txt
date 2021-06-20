@@ -1,9 +1,9 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Interface view for EMPLOYEE'
 define root view entity ZI_RAP_EMPLOYEE
-  as select from zrap_employee as Employee
+  as select from zrap_employee_#### as Employee
   
-  composition [0..*] of ZI_RAP_PROJECT as _Project
+  composition [0..*] of ZI_RAP_PROJECT_#### as _Project
 {
 
   key id                    as Id,
