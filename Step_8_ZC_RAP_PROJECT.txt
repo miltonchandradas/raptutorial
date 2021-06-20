@@ -4,8 +4,8 @@
 @Search.searchable: true
 @Metadata.allowExtensions: true
 
-define view entity ZC_RAP_PROJECT
-  as projection on ZI_RAP_PROJECT as Project
+define view entity ZC_RAP_PROJECT_####
+  as projection on ZI_RAP_PROJECT_#### as Project
 {
   @EndUserText.label: 'Project Id'
   key Id,
@@ -21,5 +21,5 @@ define view entity ZC_RAP_PROJECT
       LastChangedAt,
       LocalLastChangedAt,
       /* Associations */
-      _Employee : redirected to parent ZC_RAP_EMPLOYEE
+      _Employee : redirected to parent ZC_RAP_EMPLOYEE_####
 }
