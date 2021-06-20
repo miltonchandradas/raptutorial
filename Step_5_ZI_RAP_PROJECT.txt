@@ -1,8 +1,8 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Interface view for PROJECT'
-define view entity ZI_RAP_PROJECT
-  as select from zrap_project as Project
-  association to parent ZI_RAP_EMPLOYEE as _Employee on $projection.EmployeeId = _Employee.Id
+define view entity ZI_RAP_PROJECT_####
+  as select from zrap_project_#### as Project
+  association to parent ZI_RAP_EMPLOYEE_#### as _Employee on $projection.EmployeeId = _Employee.Id
 {
   key id                    as Id,
       employee_id           as EmployeeId,
