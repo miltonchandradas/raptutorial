@@ -1,4 +1,4 @@
-CLASS zcl_populate_demo_data DEFINITION
+CLASS zcl_populate_demo_data_#### DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,19 +12,19 @@ ENDCLASS.
 
 
 
-CLASS zcl_populate_demo_data IMPLEMENTATION.
+CLASS zcl_populate_demo_data_#### IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
 
-    DELETE FROM zrap_employee.
-    DELETE FROM zrap_project.
+    DELETE FROM zrap_employee_####.
+    DELETE FROM zrap_project_####.
 
-    DATA: wa_employee TYPE zrap_employee.
-    DATA: it_employee_data TYPE STANDARD TABLE OF zrap_employee.
+    DATA: wa_employee TYPE zrap_employee_####.
+    DATA: it_employee_data TYPE STANDARD TABLE OF zrap_employee_####.
 
-    DATA: wa_project TYPE zrap_project.
-    DATA: it_project_data TYPE STANDARD TABLE OF zrap_project.
+    DATA: wa_project TYPE zrap_project_####.
+    DATA: it_project_data TYPE STANDARD TABLE OF zrap_project_####.
 
     wa_employee-id = NEW cl_system_uuid( )->if_system_uuid~create_uuid_x16( ).
     wa_employee-firstname = 'John'.
@@ -70,8 +70,8 @@ CLASS zcl_populate_demo_data IMPLEMENTATION.
     wa_project-description = 'SAP Cloud Application Programming Model'.
     APPEND wa_project TO it_project_data.
 
-    INSERT zrap_employee FROM TABLE @it_employee_data.
-    INSERT zrap_project FROM TABLE @it_project_data.
+    INSERT zrap_employee_#### FROM TABLE @it_employee_data.
+    INSERT zrap_project_#### FROM TABLE @it_project_data.
 
 * Commit.
     COMMIT WORK.
