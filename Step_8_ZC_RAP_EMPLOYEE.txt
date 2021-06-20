@@ -4,8 +4,8 @@
 @Search.searchable: true
 @Metadata.allowExtensions: true
 
-define root view entity ZC_RAP_EMPLOYEE
-  as projection on ZI_RAP_EMPLOYEE as Employee
+define root view entity ZC_RAP_EMPLOYEE_####
+  as projection on ZI_RAP_EMPLOYEE_#### as Employee
 {
 
   @EndUserText.label: 'Employee Id'
@@ -29,5 +29,5 @@ define root view entity ZC_RAP_EMPLOYEE
       LastChangedAt,
       LocalLastChangedAt,
       /* Associations */
-      _Project : redirected to composition child ZC_RAP_PROJECT
+      _Project : redirected to composition child ZC_RAP_PROJECT_####
 }
