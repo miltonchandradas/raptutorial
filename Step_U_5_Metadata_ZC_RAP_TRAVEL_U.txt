@@ -10,7 +10,7 @@
     }
   },
   presentationVariant: [ { sortOrder: [ { by:         'TravelID',
-                                          direction:  #DESC }] }]
+                                          direction:  #ASC }] }]
 }
 annotate view ZC_RAP_Travel_U_#### with
 {
