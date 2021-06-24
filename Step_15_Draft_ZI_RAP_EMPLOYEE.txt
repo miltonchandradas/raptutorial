@@ -12,7 +12,7 @@ etag master LocalLastChangedAt
   create;
   update;
   delete;
-  association _Project { create; }
+  association _Project { create; with draft; }
 
   field ( numbering : managed, readonly ) Id;
   field ( readonly ) Active, Salary;
@@ -46,7 +46,7 @@ etag master LocalLastChangedAt
   update;
   delete;
   field ( readonly ) EmployeeId;
-  association _Employee;
+  association _Employee { with draft; }
 
   field ( numbering : managed, readonly ) Id;
 
