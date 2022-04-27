@@ -4,7 +4,7 @@ with draft;
 define behavior for ZI_RAP_EMPLOYEE_#### alias Employee
 implementation in class ZBP_I_EMPLOYEE_#### unique
 persistent table zrap_employee_####
-draft table zdr_rap_employee_####
+draft table zdr_employee_####
 lock master total etag LastChangedAt
 // authorization master ( instance )
 etag master LocalLastChangedAt
@@ -38,7 +38,7 @@ etag master LocalLastChangedAt
 
 define behavior for ZI_RAP_PROJECT_#### alias Project
 persistent table zrap_project_####
-draft table zdr_rap_project_####
+draft table zdr_project_####
 lock dependent by _Employee
 // authorization dependent by _Employee
 etag master LocalLastChangedAt
