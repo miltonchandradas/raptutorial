@@ -1,5 +1,5 @@
 @EndUserText.label: 'Consumption view for PROJECT'
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 define view entity ZC_RAP_PROJECT_#### as projection on ZI_RAP_PROJECT_#### as Project {
     key Id,
     EmployeeId,
