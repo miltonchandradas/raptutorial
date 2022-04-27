@@ -4,30 +4,36 @@
 @Search.searchable: true
 @Metadata.allowExtensions: true
 
-define root view entity ZC_RAP_EMPLOYEE_####
-  as projection on ZI_RAP_EMPLOYEE_#### as Employee
+define root view entity ZC_RAP_EMPLOYEE_99
+  provider contract transactional_query
+  as projection on ZI_RAP_EMPLOYEE_99 as Employee
 {
-
-  @EndUserText.label: 'Employee Id'
   key Id,
 
       @Search.defaultSearchElement: true
       @EndUserText.label: 'First Name'
       Firstname,
+      
       @Search.defaultSearchElement: true
       @EndUserText.label: 'Last Name'
-      Lastname,     
+      Lastname,
+      
       @EndUserText.label: 'Age'
       Age,
+      
       @Search.defaultSearchElement: true
       @EndUserText.label: 'Role'
       Role,
+      
       @EndUserText.label: 'Salary'
       Salary,
+      
       @EndUserText.label: 'Active'
       Active,
+
       LastChangedAt,
       LocalLastChangedAt,
+      
       /* Associations */
-      _Project : redirected to composition child ZC_RAP_PROJECT_####
+      _Project : redirected to composition child ZC_RAP_PROJECT_99
 }
